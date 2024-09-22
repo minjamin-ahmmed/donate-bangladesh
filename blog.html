@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+
+    <!-- DaisyUi and Tailwind CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Embed Code-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/b699328ae1.js" crossorigin="anonymous"></script>
+
+    <style>
+        .lexend{
+  font-family: "Lexend", sans-serif;
+
+}
+
+    </style>
+</head>
+
+
+<body class="lexend">
+    <section class="container w-full mx-auto">
+
+        <!-- NavBar -->
+        <div class="backdrop-blur-md shadow-md sticky top-0 z-10">
+            <div class="flex justify-between items-center py-8 px-2 lg:px-32 bg-[#F9F7F3] ">
+                <button class="btn bg-[#B4F461] font-bold">Home</button>
+               
+                <div class="flex items-center">
+                    <img class="mr-4 w-[30px] h-[30px] lg:w-[50px] lg:h-[50px]" src="assets/logo.png" alt=""> 
+                    <h1 class="text-lg font-bold lg:text-xl lg:font-extrabold">Donate Bangladesh</h1>
+                </div>
+    
+                <!-- Coin Amount -->
+                <h3 class="flex items-center bg-"><img class="mr-2" src="assets/coin.png" alt=""><span class="text-[#111111a4]">5500 BDT</span></h3>   
+            </div>
+        </div>
+
+            <!-- Accordion -->
+             <div class="px-2 lg:px-32 mt-10">
+                <h1 class="text-2xl lg:text-4xl font-extrabold mb-5">Important FAQ <i class="fa-regular fa-circle-question"></i> </h1>
+            <div class="join join-vertical w-full">
+                <div class="collapse collapse-arrow join-item border-base-300 border">
+                  <input type="radio" name="my-accordion-4" checked="checked" />
+                  <div class="collapse-title text-xl font-medium">What is the Document Object Model(DOM)?</div>
+                  <div class="collapse-content">
+                    <p>The DOM (Document Object Model) is a programming interface for web documents that represents the structure of HTML or XML as a tree of objects. It allows scripts to access, modify, and interact with the content, structure, and style of a webpage dynamically.</p>
+                  </div>
+                </div>
+                <div class="collapse collapse-arrow join-item border-base-300 border">
+                  <input type="radio" name="my-accordion-4" />
+                  <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
+                  <div class="collapse-content">
+                    <p>I can select an element from the DOM using methods like document.querySelector() for a single element or document.querySelectorAll() for multiple elements. Alternatively, I can use getElementById(), getElementsByClassName(), or getElementsByTagName().</p>
+                  </div>
+                </div>
+
+                <div class="collapse collapse-arrow join-item border-base-300 border">
+                  <input type="radio" name="my-accordion-4" />
+                  <div class="collapse-title text-xl font-medium">What is the Event deligation in the context of the DOM and why is it useful?</div>
+                  <div class="collapse-content">
+                    <p>Event delegation in the DOM is a technique where I attach a single event listener to a parent element instead of multiple child elements. It works by taking advantage of event bubbling, allowing to manage events more efficiently, especially when dynamically adding or removing elements. It's useful for improving performance and reducing code complexity.</p>
+                  </div>
+                </div>
+
+                <div class="collapse collapse-arrow join-item border-base-300 border">
+                    <input type="radio" name="my-accordion-4" />
+                    <div class="collapse-title text-xl font-medium">How do you manipulates an element's attributes and styles using the DOM?</div>
+                    <div class="collapse-content">
+                      <p>I can manipulate an element's attributes using setAttribute(), getAttribute(), and removeAttribute(). For styles, use element.style to directly set styles or classList to add/remove CSS classes.</p>
+                    </div>
+                  </div>
+              </div>
+             </div>
+</section>
+
+</body>
+</html>
+
+
+
+
+<!-- <div class="py-8 px-2 lg:px-32">
+    <div class="flex flex-col gap-5 lg:gap-0 lg:flex-row lg:flex lg:justify-between p-8 rounded-xl shadow-xl border border-[#11111125]">
+        <div class="w-full lg:w-1/2">
+            <img class="w-" src="assets/noakhali.png" alt="">
+        </div>
+
+        <div class="w-full lg:w-1/2 space-y-5">
+
+            <div class="w-11/12 flex justify-start">
+                <div class="flex items-center justify-center p-2 rounded-lg text-[#111111a4] bg-[#1111110a]">
+                    <img class="mr-2" src="assets/coin.png" alt="">
+                    <p><span class="mr-2">0</span>BDT</p>
+                </div>
+            </div>
+
+            <h2 class="font-extrabold text-lg mb-2">Donate For Flood At Noakhali, Bangladesh</h2>
+            <p class="text-[#111111a9]"> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
+
+            <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full" />
+            <button class="btn bg-[#B4F461] font-bold w-full">Donation</button>
+        </div>
+
+    </div>
+   </div> -->
