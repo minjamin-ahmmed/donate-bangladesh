@@ -38,19 +38,20 @@
                 </div>
     
                 <!-- Coin Amount -->
-                <h3 class="flex items-center bg-"><img class="mr-2" src="assets/coin.png" alt=""><span class="text-[#111111a4]">5500 BDT</span></h3>   
+                <h3 class="flex items-center bg-"><img class="mr-2" src="assets/coin.png" alt=""><span id="balance" class="text-[#111111a4]">5500 BDT</span></h3>   
             </div>
 
             <!-- Button Container -->
              <div class="flex justify-center items-center gap-5 mt-10 lg:mt-14 pb-5">
-                <button class="btn bg-[#B4F461] font-bold">Donation</button>
-                <button class="btn font-bold border border-[#1111116c]">History</button>
+                <button id="donation-btn" class="btn bg-[#B4F461] font-bold">Donation</button>
+
+                <button id="history-btn" class="btn font-bold border border-[#1111116c]">History</button>
              </div>
         </div>
 
              <!-- Card Container Noakhali-->
 
-       <div class="py-8 px-2 lg:px-32">
+       <div id="card-noakhali" class="py-8 px-2 lg:px-32">
 
         <div class="grid grid-cols-1 lg:grid-cols-2 p-8 rounded-xl shadow-xl border border-[#11111125]">
             <div >
@@ -62,45 +63,47 @@
                 <div class="w-11/12 flex justify-start">
                     <div class="flex items-center justify-center p-2 rounded-lg text-[#111111a4] bg-[#1111110a]">
                         <img class="mr-2" src="assets/coin.png" alt="">
-                        <p><span class="mr-2">0</span>BDT</p>
+                        <p><span id="noakhali-donation" class="mr-2">0</span>BDT</p>
                     </div>
                 </div>
     
-                <h2 class="font-extrabold text-lg mb-2">Donate For Flood At Noakhali, Bangladesh</h2>
+                <h2 class="font-extrabold text-lg mb-2">Donate For <span id="cause-noakhali">Flood</span> <span id="location-noakhali">At Noakhali, Bangladesh</span></h2>
                 <p class="text-[#111111a9]"> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
     
-                <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full" />
+                <input id="noakhali-field" type="text" placeholder="Write Donation Amount" class="input input-bordered w-full" />
                 
                 <div>
-                    <button class="btn bg-[#B4F461] font-bold w-full">Donation</button>
+                    <button id="noakhali-donate" class="btn bg-[#B4F461] font-bold w-full">Donation</button>
+                    
                      <!-- Modal -->
-                 <div id="myModal" class="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 hidden">
-                    <div class="bg-white rounded-lg shadow-lg max-w-lg w-full p-6">
                       
-                      <!-- Modal content -->
-                      <div class="modal-box">
+   <div id="my-modal" class="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 z-50 hidden">
+    <div class="bg-white rounded-lg shadow-lg max-w-lg w-full p-6">
+      
+      <!-- Modal content -->
+      <div class="modal-box">
 
-                        <h3 class="text-2xl font-extrabold text-center mb-3">Congrats!</h3>
-                        <div class="flex justify-center">
-                            <img src="assets/coin.png" alt="Success">
-                        </div>
-                      
-                        <p class="py-2 font-normal text-[#1111118e] text-center">
-                         You Have Donated for HumanKind </p>
+        <h3 class="text-2xl font-extrabold text-center mb-3">Congrats!</h3>
+        <div class="flex justify-center">
+            <img src="assets/coin.png" alt="Success">
+        </div>
+      
+        <p class="py-2 font-normal text-[#1111118e] text-center">
+         You Have Donated for HumanKind </p>
 
-                         <h2 class="font-bold text-lg text-center">Successfully</h2>
+         <h2 class="font-bold text-lg text-center">Successfully</h2>
 
-                        <div class="modal-action flex justify-center">
-                            
-                          <!-- Close modal button -->
-                          <button id="noakhali-close-modal-btn" class="btn bg-gray-200">
-                            Close Confirmation
-                          </button>
-                        </div>
-                      </div>
-                     </div>
+        <div class="modal-action flex justify-center">
+            
+          <!-- Close modal button -->
+          <button id="noakhali-close-modal-btn" class="btn bg-gray-200">
+            Close Confirmation
+          </button>
+        </div>
+      </div>
+     </div>
 
-              </div>
+</div>
           </div>
      </div>
     </div>
@@ -108,7 +111,7 @@
 
        <!-- Card Container Feni -->
 
-       <div class="px-2 lg:px-32 mb-8">
+       <div id="card-feni" class="px-2 lg:px-32 mb-8">
 
         <div class="grid grid-cols-1 lg:grid-cols-2 p-8 rounded-xl shadow-xl border border-[#11111125]">
             <div >
@@ -164,7 +167,7 @@
     </div>
     </div>  
        <!-- Card Container Aid For Injured in the Qouta Movement -->
-       <div class="px-2 lg:px-32 mb-8">
+       <div id="card-qouta" class="px-2 lg:px-32 mb-8">
 
         <div class="grid grid-cols-1 lg:grid-cols-2 p-8 rounded-xl shadow-xl border border-[#11111125]">
             <div >
@@ -220,7 +223,13 @@
     </div>
     </div>  
 
+    <!-- History Section -->
+    <div id="history-div" class=" hidden w-full lg:w-1/2 mx-auto">
+       
+    </div>
 
+    <script src="js/index.js"></script>
+    <script src="js/utilities.js"></script>
     </section>
 </body>
 </html>
