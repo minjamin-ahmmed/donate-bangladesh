@@ -9,7 +9,22 @@ const noakhaliDonation = document.getElementById('noakhali-donation')
 const myBalance = document.getElementById('balance')
 const locationNoakhali = document.getElementById('location-noakhali')
 const history = document.getElementById('history-div')
+
 const modal = document.getElementById('my-modal')
+const modalFeni = document.getElementById('my-modal-feni')
+const modalQouta = document.getElementById('my-modal-qouta')
+
+const donationFeniBtn = document.getElementById('donation-feni-btn')
+const feniField = document.getElementById('feni-field')
+const feniDonation = document.getElementById('feni-donation')
+
+const qoutaField = document.getElementById('qouta-field')
+const qoutaDonation = document.getElementById('qouta-donation')
+
+
+
+
+
 
 //History Button
 historyBtn.addEventListener('click', function(){
@@ -93,7 +108,103 @@ noakhaliDonateBtn.addEventListener('click', function(){
 })
 
 
-//Modal Close Button
+//Modal Close Button Noakhali
 document.getElementById("noakhali-close-modal-btn").addEventListener("click", function(){
     modal.classList.add('hidden')
+})
+
+//Modal Close Button NoaKhali
+document.getElementById('feni-close-modal-btn').addEventListener("click", function(){
+    modalFeni.classList.add('hidden')
+})
+
+//Modal Close Qouta Movement
+document.getElementById("qouta-close-modal-btn").addEventListener("click",function(){
+    modalQouta.classList.add('hidden')
+})
+
+
+//Blog-Button
+document.getElementById("blog-btn").addEventListener("click", function(){
+    window.location.href = "./blog.html"
+})
+
+
+//Feni Donate Button
+donationFeniBtn.addEventListener('click', function(){
+    
+    const feniDonationAmount = showTextId("feni-donation")
+    const inputFieldValue = showInputId("feni-field")
+    const currentBalance = showTextId("balance")
+
+    if(inputFieldValue > currentBalance || isNaN(inputFieldValue) || inputFieldValue <=0 || isNaN(feniDonationAmount) || feniField.value === ''){
+        return alert("❌ Please Check Again")
+    }
+    else{
+        let totalDonation = inputFieldValue + feniDonationAmount
+
+        //Card Balance Increased
+        document.getElementById('feni-donation').innerText = totalDonation
+
+        //Total Balance Decreased
+        let recentBalance = currentBalance - inputFieldValue
+        document.getElementById('balance').innerText = recentBalance
+
+        //Date Call
+        let donationDate = new Date();
+
+
+        const feniLocation = document.getElementById("feni-location").innerText
+        const cause =  document.getElementById("flood-relief").innerText
+
+        history.innerHTML += `<div class="border border-gray-200 rounded-xl p-4 shadow-md my-5">
+    <p class="font-bold">${inputFieldValue} Taka is Donated for ${cause} ${feniLocation}</p>
+    <p class="text-sm text-gray-500">Date: ${donationDate}</p>
+    <div>`
+
+        document.getElementById('feni-field').value = ''
+        modalFeni.classList.remove('hidden')
+
+    }
+
+})
+
+
+
+//Qouta Movement Button
+document.getElementById("qouta-btn").addEventListener('click', function(){
+
+    const qoutaDonationAmount = showTextId("qouta-donation")
+    const inputFieldElement = showInputId("qouta-field")
+    const currentBalance = showTextId("balance")
+
+    if(inputFieldElement > currentBalance || isNaN(inputFieldElement) || inputFieldElement <=0 || isNaN(qoutaDonationAmount) || qoutaField.value === ''){
+        return alert("❌ Please Check Again")
+    }
+    else{
+        let totalDonation = inputFieldElement + qoutaDonationAmount
+
+        //Card Balance Increased
+        document.getElementById('qouta-donation').innerText = totalDonation
+
+        //Total Balance Decreased
+        let recentBalance = currentBalance - inputFieldElement
+        document.getElementById('balance').innerText = recentBalance
+
+        //Date Call
+        let donationDate = new Date();
+
+
+        const qoutaLocation = document.getElementById("qouta-location").innerText
+        const cause =  document.getElementById("injured").innerText
+
+        history.innerHTML += `<div class="border border-gray-200 rounded-xl p-4 shadow-md my-5">
+    <p class="font-bold">${inputFieldElement} Taka is Donated for ${cause} ${qoutaLocation}</p>
+    <p class="text-sm text-gray-500">Date: ${donationDate}</p>
+    <div>`
+
+        document.getElementById('qouta-field').value = ''
+        modalQouta.classList.remove('hidden')
+    }
+
 })

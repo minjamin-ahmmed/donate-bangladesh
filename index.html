@@ -30,7 +30,7 @@
         <!-- NavBar -->
         <div class="backdrop-blur-md shadow-md sticky top-0 z-10">
             <div class="flex justify-between items-center py-8 px-2 lg:px-32 bg-[#F9F7F3] ">
-                <button class="btn bg-[#B4F461] font-bold">Blog</button>
+                <button id="blog-btn" class="btn bg-[#B4F461] font-bold">Blog</button>
                
                 <div class="flex items-center">
                     <img class="mr-4 w-[30px] h-[30px] lg:w-[50px] lg:h-[50px]" src="assets/logo.png" alt=""> 
@@ -53,7 +53,7 @@
 
        <div id="card-noakhali" class="py-8 px-2 lg:px-32">
 
-        <div class="grid grid-cols-1 lg:grid-cols-2 p-8 rounded-xl shadow-xl border border-[#11111125]">
+        <div class="grid grid-cols-1 gap-y-5 lg:gap-y-0 lg:grid-cols-2 p-8 rounded-xl shadow-xl border border-[#11111125]">
             <div >
                 <img class="w-" src="assets/noakhali.png" alt="">
             </div>
@@ -74,7 +74,7 @@
                 
                 <div>
                     <button id="noakhali-donate" class="btn bg-[#B4F461] font-bold w-full">Donation</button>
-                    
+
                      <!-- Modal -->
                       
    <div id="my-modal" class="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 z-50 hidden">
@@ -113,7 +113,7 @@
 
        <div id="card-feni" class="px-2 lg:px-32 mb-8">
 
-        <div class="grid grid-cols-1 lg:grid-cols-2 p-8 rounded-xl shadow-xl border border-[#11111125]">
+        <div class="grid grid-cols-1 gap-y-5 lg:gap-y-0  lg:grid-cols-2 p-8 rounded-xl shadow-xl border border-[#11111125]">
             <div >
                 <img class="w-" src="assets/feni.png" alt="">
             </div>
@@ -123,17 +123,17 @@
                 <div class="w-11/12 flex justify-start">
                     <div class="flex items-center justify-center p-2 rounded-lg text-[#111111a4] bg-[#1111110a]">
                         <img class="mr-2" src="assets/coin.png" alt="">
-                        <p><span class="mr-2">600</span>BDT</p>
+                        <p><span id="feni-donation" class="mr-2">600</span>BDT</p>
                     </div>
                 </div>
     
-                <h2 class="font-extrabold text-lg mb-2">Donate For Flood Relief in Feni, Bangladesh</h2>
+                <h2 class="font-extrabold text-lg mb-2">Donate For <span id="flood-relief">Flood Relief</span> <span id="feni-location">in Feni, Bangladesh</span></h2>
                 <p class="text-[#111111a9]"> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
     
-                <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full" />
+                <input id="feni-field" type="text" placeholder="Write Donation Amount" class="input input-bordered w-full" />
                 
                 <div>
-                    <button class="btn bg-[#B4F461] font-bold w-full">Donation</button>
+                    <button id="donation-feni-btn" class="btn bg-[#B4F461] font-bold w-full">Donation</button>
                      <!-- Modal -->
                  <div id="my-modal-feni" class="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 hidden">
                     <div class="bg-white rounded-lg shadow-lg max-w-lg w-full p-6">
@@ -169,7 +169,7 @@
        <!-- Card Container Aid For Injured in the Qouta Movement -->
        <div id="card-qouta" class="px-2 lg:px-32 mb-8">
 
-        <div class="grid grid-cols-1 lg:grid-cols-2 p-8 rounded-xl shadow-xl border border-[#11111125]">
+        <div class="grid grid-cols-1 gap-y-5 lg:gap-y-0  lg:grid-cols-2 p-8 rounded-xl shadow-xl border border-[#11111125]">
             <div >
                 <img class="w-" src="assets/quota-protest.png" alt="">
             </div>
@@ -179,17 +179,17 @@
                 <div class="w-11/12 flex justify-start">
                     <div class="flex items-center justify-center p-2 rounded-lg text-[#111111a4] bg-[#1111110a]">
                         <img class="mr-2" src="assets/coin.png" alt="">
-                        <p><span class="mr-2">2400</span>BDT</p>
+                        <p><span id="qouta-donation" class="mr-2">2400</span>BDT</p>
                     </div>
                 </div>
     
-                <h2 class="font-extrabold text-lg mb-2">Aid for injured in Qouta Movement</h2>
+                <h2 class="font-extrabold text-lg mb-2">Aid for <span id="injured">injured</span> in <span id="qouta-location">Qouta Movement</span></h2>
                 <p class="text-[#111111a9]"> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
     
-                <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full" />
+                <input id="qouta-field" type="text" placeholder="Write Donation Amount" class="input input-bordered w-full" />
                 
                 <div>
-                    <button class="btn bg-[#B4F461] font-bold w-full">Donation</button>
+                    <button id="qouta-btn" class="btn bg-[#B4F461] font-bold w-full">Donation</button>
                      <!-- Modal -->
                  <div id="my-modal-qouta" class="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 hidden">
                     <div class="bg-white rounded-lg shadow-lg max-w-lg w-full p-6">
@@ -227,6 +227,9 @@
     <div id="history-div" class=" hidden w-full lg:w-1/2 mx-auto">
        
     </div>
+
+    <!-- Footer Section -->
+     
 
     <script src="js/index.js"></script>
     <script src="js/utilities.js"></script>
